@@ -43,16 +43,17 @@
             label1 = new Label();
             label8 = new Label();
             txtCantidad = new TextBox();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(530, 261);
+            button1.Location = new Point(467, 261);
             button1.Name = "button1";
             button1.Size = new Size(134, 23);
             button1.TabIndex = 0;
-            button1.Text = "Guardar producto";
+            button1.Text = "Modificar producto";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -67,9 +68,9 @@
             LabelTitulo.Font = new Font("Corbel", 20.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
             LabelTitulo.Location = new Point(12, 9);
             LabelTitulo.Name = "LabelTitulo";
-            LabelTitulo.Size = new Size(392, 35);
+            LabelTitulo.Size = new Size(299, 35);
             LabelTitulo.TabIndex = 1;
-            LabelTitulo.Text = "BIENVENIDO A PRODUCTVIEWER";
+            LabelTitulo.Text = "BIENVENIDO A GESTORP";
             LabelTitulo.TextAlign = ContentAlignment.TopCenter;
             LabelTitulo.Click += label1_Click;
             // 
@@ -189,6 +190,16 @@
             txtCantidad.Size = new Size(134, 23);
             txtCantidad.TabIndex = 29;
             // 
+            // button2
+            // 
+            button2.Location = new Point(607, 261);
+            button2.Name = "button2";
+            button2.Size = new Size(134, 23);
+            button2.TabIndex = 31;
+            button2.Text = "Agregar producto";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -196,6 +207,7 @@
             AutoSize = true;
             BackColor = Color.MintCream;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
             Controls.Add(label8);
             Controls.Add(txtCantidad);
             Controls.Add(label1);
@@ -216,7 +228,7 @@
             MinimizeBox = false;
             MinimumSize = new Size(816, 489);
             Name = "Form1";
-            Text = "Product Viewer";
+            Text = "GestorP";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -244,5 +256,6 @@
         private Label label1;
         private Label label8;
         private TextBox txtCantidad;
+        private Button button2;
     }
 }

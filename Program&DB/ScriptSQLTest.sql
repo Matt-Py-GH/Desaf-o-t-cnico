@@ -85,16 +85,12 @@ BEGIN
 END;
 GO
 
--- Eliminar la clave foránea en Producto que referencia a TipoProducto
-ALTER TABLE Producto
-DROP CONSTRAINT FK_Producto_TipoProducto;
-
-
+-- Llenado de algunos items para las tablas (innecesario de ejecutar, pueden ser agregadas haciendo uso de GestorP)
 INSERT INTO TipoProducto (IdTipoProducto, Descripcion) VALUES (1, 'Resistencia');
 INSERT INTO TipoProducto (IdTipoProducto, Descripcion) VALUES (2, 'Capacitor');
 INSERT INTO TipoProducto (IdTipoProducto, Descripcion) VALUES (3, 'Transistor');
 INSERT INTO TipoProducto (IdTipoProducto, Descripcion) VALUES (4, 'Diodo');
 INSERT INTO TipoProducto (IdTipoProducto, Descripcion) VALUES (5, 'Potenciometro');
 
-SELECT * FROM TipoProducto
-SELECT * FROM Producto
+INSERT INTO Producto (IdTipoProducto, Nombre, Precio, Cantidad) VALUES (1, 'Resistencia 10K', 1, 200)
+

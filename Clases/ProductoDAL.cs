@@ -1,7 +1,8 @@
 ﻿using System.Data.SqlClient;
 
 namespace Aplicación_Desafío.Clases
-{
+{   
+    //Creacion de esta clase debido a que contiene los metodos DELETE, ADD, LIST de la clase Producto
     public class ProductoDAL
     {
         public static int AgregarProducto(Producto producto)

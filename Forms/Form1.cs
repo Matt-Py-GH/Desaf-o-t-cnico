@@ -76,12 +76,11 @@ namespace Aplicación_Desafío
                     MessageBox.Show("Error al modificar el producto.");
                 }
                 RefreshPantalla();
-                
+
             }
             else
             {
-                // Si no hay producto seleccionado, agregamos uno nuevo
-                int resultado = ProductoDAL.AgregarProducto(producto);
+                int resultado = ProductoDAL.ModificarProducto(producto);
 
                 if (resultado > 0)
                 {
@@ -96,18 +95,6 @@ namespace Aplicación_Desafío
             }
         }
 
-
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             campoID.Enabled = false;
@@ -118,6 +105,8 @@ namespace Aplicación_Desafío
         {
             dataGridView1.DataSource = ProductoDAL.ProductosMostrados();
             campoID.Text = string.Empty;
+            campoID.Clear();
+
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -168,7 +157,6 @@ namespace Aplicación_Desafío
                 MessageBox.Show("Error, ningún producto seleccionado");
             }
 
-            // Refresca la pantalla después de eliminar
             RefreshPantalla();
         }
 
@@ -195,6 +183,81 @@ namespace Aplicación_Desafío
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtIDTipo.Text) ||
+                string.IsNullOrWhiteSpace(txtNombre.Text) ||
+                string.IsNullOrWhiteSpace(txtPrecio.Text) ||
+                string.IsNullOrWhiteSpace(txtCantidad.Text))
+            {
+                MessageBox.Show("Por favor, completa todos los campos.");
+                return;
+            }
+
+            // Verificar que los campos numéricos tengan valores válidos
+            int idTipoProducto;
+            double precio;
+            int cantidad;
+
+            if (!int.TryParse(txtIDTipo.Text, out idTipoProducto))
+            {
+                MessageBox.Show("El ID del tipo de producto debe ser un número entero válido.");
+                return;
+            }
+
+            if (!double.TryParse(txtPrecio.Text, out precio))
+            {
+                MessageBox.Show("El precio debe ser un número válido.");
+                return;
+            }
+
+            if (!int.TryParse(txtCantidad.Text, out cantidad))
+            {
+                MessageBox.Show("La cantidad debe ser un número entero válido.");
+                return;
+            }
+
+            Producto producto = new Producto();
+            producto.IdTipoProducto = Convert.ToInt32(txtIDTipo.Text);
+            producto.Nombre = txtNombre.Text;
+            producto.Precio = Convert.ToDouble(txtPrecio.Text);
+            producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
+
+            if (dataGridView1.CurrentRow != null)
+            {
+                int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["IdProducto"].Value);
+                producto.IdProducto = id;
+
+                int resultado = ProductoDAL.AgregarProducto(producto);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Producto Agregado con éxito.");
+                }
+                else
+                {
+                    MessageBox.Show("Error al agregar el producto.");
+                }
+                RefreshPantalla();
+
+            }
+            else
+            {
+                int resultado = ProductoDAL.AgregarProducto(producto);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Producto agregado con éxito.");
+                }
+                else
+                {
+                    MessageBox.Show("Error al agregar el producto.");
+                }
+                RefreshPantalla();
+
+            }
         }
     }
 }
