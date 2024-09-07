@@ -21,7 +21,7 @@ namespace Aplicación_Desafío
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            // Verificar que los campos no estén vacíos
             if (string.IsNullOrWhiteSpace(txtIDTipo.Text) ||
                 string.IsNullOrWhiteSpace(txtNombre.Text) ||
                 string.IsNullOrWhiteSpace(txtPrecio.Text) ||
@@ -31,7 +31,7 @@ namespace Aplicación_Desafío
                 return;
             }
 
-            // Verifica que los campos numéricos tengan valores válidos
+            // Verificar que los campos numéricos tengan valores válidos
             int idTipoProducto;
             double precio;
             int cantidad;
@@ -54,24 +54,48 @@ namespace Aplicación_Desafío
                 return;
             }
 
-            // Si todas las validaciones son correctas, continúa con el proceso
             Producto producto = new Producto();
-            producto.IdTipoproducto = idTipoProducto;
+            producto.IdTipoProducto = Convert.ToInt32(txtIDTipo.Text);
             producto.Nombre = txtNombre.Text;
-            producto.Precio = precio;
-            producto.Cantidad = cantidad;
+            producto.Precio = Convert.ToDouble(txtPrecio.Text);
+            producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
 
-            int resultado = ProductoDAL.AgregarProducto(producto);
-
-            if (resultado > 0)
+            if (dataGridView1.CurrentRow != null)
             {
-                MessageBox.Show("Éxito al guardar");
+                int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["IdProducto"].Value);
+                producto.IdProducto = id;
+
+                int resultado = ProductoDAL.ModificarProducto(producto);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Producto modificado con éxito.");
+                }
+                else
+                {
+                    MessageBox.Show("Error al modificar el producto.");
+                }
+                RefreshPantalla();
+                
             }
             else
             {
-                MessageBox.Show("Error al guardar");
+                // Si no hay producto seleccionado, agregamos uno nuevo
+                int resultado = ProductoDAL.AgregarProducto(producto);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Producto agregado con éxito.");
+                }
+                else
+                {
+                    MessageBox.Show("Error al agregar el producto.");
+                }
+                RefreshPantalla();
+
             }
         }
+
 
 
         private void button3_Click(object sender, EventArgs e)
@@ -87,6 +111,13 @@ namespace Aplicación_Desafío
         private void Form1_Load(object sender, EventArgs e)
         {
             campoID.Enabled = false;
+            RefreshPantalla();
+        }
+
+        public void RefreshPantalla()
+        {
+            dataGridView1.DataSource = ProductoDAL.ProductosMostrados();
+            campoID.Text = string.Empty;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -101,19 +132,44 @@ namespace Aplicación_Desafío
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Producto producto = new Producto();
-            producto.IdProducto = Convert.ToInt32(campoID.Text);
-
-            int resultado = ProductoDAL.EliminarProducto(producto);
-
-            if (resultado > 0)
+            // Verifica si el campoID está vacío o no es un número válido
+            if (string.IsNullOrWhiteSpace(campoID.Text))
             {
-                MessageBox.Show("Éxito al borrar producto");
+                MessageBox.Show("Por favor, ingrese un ID de producto válido.");
+                return; // Detiene la ejecución si el campo está vacío
+            }
+
+            // Verifica que el campo contenga un número entero válido
+            int idProducto;
+            if (!int.TryParse(campoID.Text, out idProducto))
+            {
+                MessageBox.Show("El ID del producto debe ser un número entero válido.");
+                return;
+            }
+
+            Producto producto = new Producto();
+            producto.IdProducto = idProducto;
+
+            if (campoID.Text != null)
+            {
+                int resultado = ProductoDAL.EliminarProducto(producto);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Éxito al borrar producto");
+                }
+                else
+                {
+                    MessageBox.Show("Error al borrar producto");
+                }
             }
             else
             {
-                MessageBox.Show("Error al borrar producto");
+                MessageBox.Show("Error, ningún producto seleccionado");
             }
+
+            // Refresca la pantalla después de eliminar
+            RefreshPantalla();
         }
 
         private void button2_Click_1(object sender, EventArgs e)

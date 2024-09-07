@@ -12,8 +12,5 @@ namespace Aplicación_Desafío
             return conexion;
         }
 
-
-
-
     }
 }

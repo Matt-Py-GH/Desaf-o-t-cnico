@@ -22,3 +22,4 @@ C:\Users\mateo\source\repos\Aplicación_Desafío\obj\Debug\net8.0-windows\refint
 C:\Users\mateo\source\repos\Aplicación_Desafío\obj\Debug\net8.0-windows\Aplicación_Desafío.pdb
 C:\Users\mateo\source\repos\Aplicación_Desafío\obj\Debug\net8.0-windows\Aplicación_Desafío.genruntimeconfig.cache
 C:\Users\mateo\source\repos\Aplicación_Desafío\obj\Debug\net8.0-windows\ref\Aplicación_Desafío.dll
+C:\Users\mateo\source\repos\Aplicación_Desafío\obj\Debug\net8.0-windows\Aplicación_Desafío.sourcelink.json

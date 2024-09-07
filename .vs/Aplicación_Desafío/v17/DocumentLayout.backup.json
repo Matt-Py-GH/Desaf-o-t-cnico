@@ -11,10 +11,6 @@
       "RelativeMoniker": "D:0:0:{6BA14516-EEEB-46BD-822A-E7600C069BA7}|Aplicaci\u00F3n_Desaf\u00EDo.csproj|solutionrelative:forms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BA14516-EEEB-46BD-822A-E7600C069BA7}|Aplicaci\u00F3n_Desaf\u00EDo.csproj|c:\\users\\mateo\\source\\repos\\aplicaci\u00F3n_desaf\u00EDo\\program\u0026db\\bdgeneral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BA14516-EEEB-46BD-822A-E7600C069BA7}|Aplicaci\u00F3n_Desaf\u00EDo.csproj|solutionrelative:program\u0026db\\bdgeneral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6BA14516-EEEB-46BD-822A-E7600C069BA7}|Aplicaci\u00F3n_Desaf\u00EDo.csproj|c:\\users\\mateo\\source\\repos\\aplicaci\u00F3n_desaf\u00EDo\\forms\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BA14516-EEEB-46BD-822A-E7600C069BA7}|Aplicaci\u00F3n_Desaf\u00EDo.csproj|solutionrelative:forms\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,6 +21,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{6BA14516-EEEB-46BD-822A-E7600C069BA7}|Aplicaci\u00F3n_Desaf\u00EDo.csproj|c:\\users\\mateo\\source\\repos\\aplicaci\u00F3n_desaf\u00EDo\\clases\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BA14516-EEEB-46BD-822A-E7600C069BA7}|Aplicaci\u00F3n_Desaf\u00EDo.csproj|solutionrelative:clases\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BA14516-EEEB-46BD-822A-E7600C069BA7}|Aplicaci\u00F3n_Desaf\u00EDo.csproj|c:\\users\\mateo\\source\\repos\\aplicaci\u00F3n_desaf\u00EDo\\program\u0026db\\bdgeneral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BA14516-EEEB-46BD-822A-E7600C069BA7}|Aplicaci\u00F3n_Desaf\u00EDo.csproj|solutionrelative:program\u0026db\\bdgeneral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Aplicaci\u00F3n_Desaf\u00EDo\\Forms\\Form1.cs",
               "RelativeDocumentMoniker": "Forms\\Form1.cs",
@@ -51,26 +51,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Aplicaci\u00F3n_Desaf\u00EDo\\Forms\\Form1.cs",
+              "RelativeDocumentMoniker": "Forms\\Form1.cs",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Aplicaci\u00F3n_Desaf\u00EDo\\Forms\\Form1.cs",
+              "RelativeToolTip": "Forms\\Form1.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAmwKYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T19:46:26.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Aplicaci\u00F3n_Desaf\u00EDo\\Forms\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Forms\\Form1.Designer.cs",
               "ToolTip": "C:\\Users\\mateo\\source\\repos\\Aplicaci\u00F3n_Desaf\u00EDo\\Forms\\Form1.Designer.cs",
               "RelativeToolTip": "Forms\\Form1.Designer.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAQwKwAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-06T15:44:05.494Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Producto.cs",
               "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Aplicaci\u00F3n_Desaf\u00EDo\\Clases\\Producto.cs",
               "RelativeDocumentMoniker": "Clases\\Producto.cs",
               "ToolTip": "C:\\Users\\mateo\\source\\repos\\Aplicaci\u00F3n_Desaf\u00EDo\\Clases\\Producto.cs",
               "RelativeToolTip": "Clases\\Producto.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAwAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAYAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-05T20:12:31.701Z",
               "EditorCaption": ""
@@ -83,14 +96,14 @@
               "RelativeDocumentMoniker": "Clases\\ProductoDAL.cs",
               "ToolTip": "C:\\Users\\mateo\\source\\repos\\Aplicaci\u00F3n_Desaf\u00EDo\\Clases\\ProductoDAL.cs",
               "RelativeToolTip": "Clases\\ProductoDAL.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAqwCQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAD4vw8AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-05T20:25:38.543Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "BDGeneral.cs",
               "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Aplicaci\u00F3n_Desaf\u00EDo\\Program\u0026DB\\BDGeneral.cs",
               "RelativeDocumentMoniker": "Program\u0026DB\\BDGeneral.cs",
@@ -99,19 +112,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-05T19:59:26.856Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Aplicaci\u00F3n_Desaf\u00EDo\\Forms\\Form1.cs",
-              "RelativeDocumentMoniker": "Forms\\Form1.cs",
-              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Aplicaci\u00F3n_Desaf\u00EDo\\Forms\\Form1.cs",
-              "RelativeToolTip": "Forms\\Form1.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAD4v20AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T19:46:26.066Z",
               "EditorCaption": ""
             }
           ]

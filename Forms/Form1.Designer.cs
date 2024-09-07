@@ -30,7 +30,6 @@
         {
             button1 = new Button();
             LabelTitulo = new Label();
-            button4 = new Button();
             dataGridView1 = new DataGridView();
             txtNombre = new TextBox();
             label2 = new Label();
@@ -38,10 +37,7 @@
             txtIDTipo = new TextBox();
             label3 = new Label();
             label4 = new Label();
-            label7 = new Label();
-            elimProd = new TextBox();
             button5 = new Button();
-            button2 = new Button();
             linkLabel1 = new LinkLabel();
             campoID = new TextBox();
             label1 = new Label();
@@ -52,11 +48,11 @@
             // 
             // button1
             // 
-            button1.Location = new Point(617, 205);
+            button1.Location = new Point(530, 261);
             button1.Name = "button1";
             button1.Size = new Size(134, 23);
             button1.TabIndex = 0;
-            button1.Text = "Cargar producto";
+            button1.Text = "Guardar producto";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -69,23 +65,13 @@
             LabelTitulo.Cursor = Cursors.IBeam;
             LabelTitulo.FlatStyle = FlatStyle.System;
             LabelTitulo.Font = new Font("Corbel", 20.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            LabelTitulo.Location = new Point(295, 9);
+            LabelTitulo.Location = new Point(12, 9);
             LabelTitulo.Name = "LabelTitulo";
             LabelTitulo.Size = new Size(392, 35);
             LabelTitulo.TabIndex = 1;
             LabelTitulo.Text = "BIENVENIDO A PRODUCTVIEWER";
             LabelTitulo.TextAlign = ContentAlignment.TopCenter;
             LabelTitulo.Click += label1_Click;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(12, 29);
-            button4.Name = "button4";
-            button4.Size = new Size(121, 23);
-            button4.TabIndex = 4;
-            button4.Text = "Ver stock total";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
             // 
             // dataGridView1
             // 
@@ -99,7 +85,7 @@
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(575, 67);
+            txtNombre.Location = new Point(530, 134);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(134, 23);
             txtNombre.TabIndex = 6;
@@ -107,7 +93,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(463, 70);
+            label2.Location = new Point(418, 137);
             label2.Name = "label2";
             label2.Size = new Size(106, 15);
             label2.TabIndex = 7;
@@ -115,14 +101,14 @@
             // 
             // txtPrecio
             // 
-            txtPrecio.Location = new Point(575, 96);
+            txtPrecio.Location = new Point(530, 163);
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(134, 23);
             txtPrecio.TabIndex = 8;
             // 
             // txtIDTipo
             // 
-            txtIDTipo.Location = new Point(575, 125);
+            txtIDTipo.Location = new Point(530, 192);
             txtIDTipo.Name = "txtIDTipo";
             txtIDTipo.Size = new Size(134, 23);
             txtIDTipo.TabIndex = 9;
@@ -130,7 +116,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(463, 96);
+            label3.Location = new Point(418, 163);
             label3.Name = "label3";
             label3.Size = new Size(43, 15);
             label3.TabIndex = 10;
@@ -139,48 +125,22 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(463, 128);
+            label4.Location = new Point(418, 195);
             label4.Name = "label4";
             label4.Size = new Size(96, 15);
             label4.TabIndex = 11;
             label4.Text = "Id tipo producto:";
             label4.Click += label4_Click;
             // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(447, 367);
-            label7.Name = "label7";
-            label7.Size = new Size(73, 15);
-            label7.TabIndex = 14;
-            label7.Text = "ID producto:";
-            // 
-            // elimProd
-            // 
-            elimProd.Location = new Point(526, 364);
-            elimProd.Name = "elimProd";
-            elimProd.Size = new Size(134, 23);
-            elimProd.TabIndex = 13;
-            // 
             // button5
             // 
-            button5.Location = new Point(526, 335);
+            button5.Location = new Point(530, 290);
             button5.Name = "button5";
             button5.Size = new Size(134, 23);
             button5.TabIndex = 12;
             button5.Text = "Eliminar producto";
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(435, 205);
-            button2.Name = "button2";
-            button2.Size = new Size(134, 23);
-            button2.TabIndex = 19;
-            button2.Text = "Modificar producto";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click_1;
             // 
             // linkLabel1
             // 
@@ -197,7 +157,7 @@
             // 
             // campoID
             // 
-            campoID.Location = new Point(575, 257);
+            campoID.Location = new Point(670, 134);
             campoID.Name = "campoID";
             campoID.Size = new Size(41, 23);
             campoID.TabIndex = 27;
@@ -206,7 +166,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(575, 239);
+            label1.Location = new Point(670, 116);
             label1.Name = "label1";
             label1.Size = new Size(21, 15);
             label1.TabIndex = 28;
@@ -216,7 +176,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(463, 157);
+            label8.Location = new Point(418, 224);
             label8.Name = "label8";
             label8.Size = new Size(58, 15);
             label8.TabIndex = 30;
@@ -224,7 +184,7 @@
             // 
             // txtCantidad
             // 
-            txtCantidad.Location = new Point(575, 154);
+            txtCantidad.Location = new Point(530, 221);
             txtCantidad.Name = "txtCantidad";
             txtCantidad.Size = new Size(134, 23);
             txtCantidad.TabIndex = 29;
@@ -241,9 +201,6 @@
             Controls.Add(label1);
             Controls.Add(campoID);
             Controls.Add(linkLabel1);
-            Controls.Add(button2);
-            Controls.Add(label7);
-            Controls.Add(elimProd);
             Controls.Add(button5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -252,7 +209,6 @@
             Controls.Add(label2);
             Controls.Add(txtNombre);
             Controls.Add(dataGridView1);
-            Controls.Add(button4);
             Controls.Add(LabelTitulo);
             Controls.Add(button1);
             MaximizeBox = false;
@@ -271,7 +227,6 @@
 
         private Button button1;
         private Label LabelTitulo;
-        private Button button4;
         private DataGridView dataGridView1;
         private TextBox txtNombre;
         private Label label2;
@@ -283,10 +238,7 @@
         private Label label6;
         private TextBox textBox1;
         private TextBox textBox2;
-        private Label label7;
-        private TextBox elimProd;
         private Button button5;
-        private Button button2;
         private LinkLabel linkLabel1;
         private TextBox campoID;
         private Label label1;
